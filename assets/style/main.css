@@ -45,6 +45,8 @@ th, tr{
 .d-flex {
     display: flex!important;
     flex-wrap: wrap;
+    gap : 3rem ;
+    justify-content:center;
 }
 
 .card{
@@ -286,7 +288,7 @@ footer{
     display: flex;
     flex-direction: column;
     
-    height: 70vh;
+    height: 110vh;
     flex-wrap: wrap;
     align-content: space-around;
     gap:2rem;
@@ -310,14 +312,14 @@ footer{
 .detalle{
     display: flex;
     border: 15px groove rgb(146, 80, 211);
-    width: 60vw;
+    width: 80vw;
     height: 60vh;
     align-items: center;
     background-color: rgb(233 222 238);
     border-radius: 6px;
     border-color: #84239f;
     box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
-    gap:4rem;
+    gap:2rem;
     font-size: 20px;
     text-align: center;
     font-family: cursive;
@@ -329,32 +331,71 @@ footer{
 figure{
   
     margin: 1rem;
+    width: 720px;
+   
  
 }
 
 .titulo{
-    width: 330px;
+    width: 530px;
     height: 300px;
     border: 2px solid #84239f;
     border-width: 8px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
+    margin: 1rem;
 }
 
 
-@media (max-width: 530px){
+.lupita{
+
+    display: flex!important;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 1122px){
     .card{
         
         width: 100%;
     }
     .contain{
-      height: 130vh;
+      height: 170vh;
     }
 
 
 }
+
+@media (max-width: 833px){
+    .card{
+        
+        width: 100%;
+    }
+    .contain{
+      height: 235vh;
+    }
+
+
+}
+
+@media (max-width: 545px){
+    .card{
+        
+        width: 100%;
+    }
+    .contain{
+      height: 345vh;
+    }
+
+
+}
+
+
+
+
 
 @media (max-width: 992px){
    .nav-link{
@@ -369,3 +410,18 @@ figure{
 }
 }
 
+
+@media (max-width: 775px){
+    .detalle{
+    flex-wrap: wrap; 
+    width: 80vw;
+    height: 100vh;
+    align-items: center;
+    gap:2rem;
+    font-size: 20px;}
+
+    .contain{
+        height: 135vh;
+    }
+    
+}
