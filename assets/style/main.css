@@ -278,6 +278,18 @@ footer{
     font-family: cursive;
 }
 
+.titulotarj{
+    font-size: 22px;
+    font-family: cursive;
+    text-decoration: underline;
+}
+
+
+.precio1{
+    font-size: 18px;
+    font-family: cursive;
+}
+
 .form-label{
     font-family: cursive;
     font-weight: bold;
@@ -328,10 +340,22 @@ footer{
     text-shadow: 2px 1px 2px rgb(146, 97, 146);
 }
 
-figure{
+.figure{
   
     margin: 1rem;
     width: 720px;
+   
+ 
+}
+
+.figure2{
+  
+        margin: 1rem;
+        border-radius: 0px;
+        width: 500.7px;
+        height: 280px;
+        
+    
    
  
 }
@@ -415,7 +439,7 @@ figure{
     .detalle{
     flex-wrap: wrap; 
     width: 80vw;
-    height: 100vh;
+    height: 130vh;
     align-items: center;
     gap:2rem;
     font-size: 20px;}
@@ -423,5 +447,12 @@ figure{
     .contain{
         height: 135vh;
     }
+    .figure2{
+  
+        margin: 1rem;
+        border-radius: 0px;
+        width: 500.7px;
+        height: 280px;
+      }
     
 }
