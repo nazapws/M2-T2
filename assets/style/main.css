@@ -33,6 +33,11 @@ table{
     height: 2rem;
     background-color: rgb(207, 182, 220);
 }
+
+.fila1{
+    height: 2rem;
+    background-color: rgb(243, 226, 252);
+}
 th, tr{
     border: 1px solid black;
     width: 20rem;

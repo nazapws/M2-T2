@@ -1,9 +1,13 @@
 console.log([document])
-const eventos = data.events
-let filtroAux = [ ]
+
+
+let dat = fetch("https://mindhub-xj03.onrender.com/api/amazing")
+.then((response) => response.json())
+.then(even => {
+
+let eventos = even.events
 let principal = document.getElementById("nuevo")
 let tarjetas =  " "
-
 
 for (even of eventos){
     
@@ -26,9 +30,8 @@ for (even of eventos){
 
 }
 
+
 principal.innerHTML = tarjetas
-
-
 
 
 const check = document.getElementById("cate")
@@ -71,44 +74,31 @@ function checkboxes (array){
 
 function filtrarBarra(array, entrada){
 
-  let filtrado = array.filter(valor => valor.category.toLowerCase().includes(entrada.toLowerCase()))
+  let filtrado = array.filter(valor => valor.name.toLowerCase().includes(entrada.toLowerCase()))
   console.log(filtrado)
   return filtrado
 }
-
-function filtrarArreglo(array, entrada){
-
-  let filtrado = array.filter(valor => valor.category.toLowerCase().includes(entrada[0].toLowerCase()))
-  console.log(filtrado)
-  return filtrado
-}
-
-
 
 function filtrarChecks(array){
   let checks = Array.from(document.querySelectorAll("input[type='checkbox']"))
   let losCheckeados = checks.filter(valor => valor.checked)
-
-
   //console.log(losCheckeados)
 
   if(losCheckeados.length == 0){
-    return array
-  }
-  else{
+    return array}
+  
   let categoria = losCheckeados.map(valor => valor.value)
   console.log(categoria)
   
   //let coincidencia = filtrarArreglo(array2, categoria)
   
   let catFiltro = array.filter(valor => categoria.includes(valor.category)) 
-  //console.log(catFiltro)
+  console.log(catFiltro)
 
   //let catFiltro1 = array.concat(catFiltro)
   //console.log(catFiltro1)
-  return catFiltro}
+  return catFiltro
 }
-
 
 function mostrar(array){
   if(array.length == 0){
@@ -136,4 +126,14 @@ function mostrar(array){
   })
   principal.innerHTML = mostradas
 }
+
+})
+
+
+
+
+
+
+
+
 

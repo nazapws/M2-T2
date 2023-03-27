@@ -1,9 +1,15 @@
-let queryString = location.search
+let datos = fetch("https://mindhub-xj03.onrender.com/api/amazing")
+.then((response) => response.json())
+.then(even => {
+
+const queryString = location.search
 let params = new URLSearchParams(queryString)
 let id = params.get("id")
-let arrayeventos = data.events
+
+let arrayeventos = even.events
 console.log(arrayeventos)
-let t = arrayeventos.find(valor => valor._id == id)
+
+const t = arrayeventos.filter(valor => id == valor.id)
 console.log(t)
 const a = document.getElementById("dif")
 
@@ -29,3 +35,6 @@ imprimir +=
 </div> `
 
 a.innerHTML = imprimir
+
+
+})

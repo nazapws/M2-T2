@@ -1,7 +1,10 @@
+let dat = fetch("https://mindhub-xj03.onrender.com/api/amazing")
+.then((response) => response.json())
+.then(even => {
 let eventosPasados = []
 let eventosFuturos = []
-const eventos = data.events
-const fechaActual = data.currentDate
+const eventos = even.events
+const fechaActual = even.currentDate
 const arreglofechas = []
 
 for (let b=0; b<eventos.length; b++){
@@ -144,3 +147,5 @@ function mostrar(array){
   principal.innerHTML = mostradas
 }
 
+
+})
